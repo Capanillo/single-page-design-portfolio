@@ -400,6 +400,7 @@ section.call button:hover {
     width: 60%;
   }
   section.call .text h3 {
+    font-size: var(--title-m);
     text-align: left;
   }
   section.call .text p {
