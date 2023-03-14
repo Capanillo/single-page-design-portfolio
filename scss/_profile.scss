@@ -1,0 +1,116 @@
+section.profile {
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+        width: calc(100% - 4.1rem);
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h3 {
+            font-size: 2.6rem;
+            margin-top: 4rem;
+            color: var(--black);
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.6rem;
+            line-height: 2.6rem;
+            color: var(--brown);
+            text-align: center;
+            padding-block: 2.4rem;
+        }
+
+        button {
+            background-color: var(--red);
+
+            &:hover {
+                background-color: var(--orange);
+            }
+
+
+        }
+    }
+
+
+}
+
+@media (min-width: 768px) {
+    section.profile {
+
+
+        margin-top: 12rem;
+        flex-direction: row;
+
+        align-items: center;
+
+
+        img {
+            display: block;
+            width: 50%;
+            transform: translateX(-6rem);
+        }
+
+
+        .content {
+            align-items: start;
+            justify-content: space-between;
+            flex: 1;
+            align-content: space-between;
+
+
+            h3 {
+                margin-top: 0;
+                text-align: left;
+                font-size: var(--title-s);
+                line-height: var(--line-height-s);
+            }
+
+            p {
+                text-align: left;
+                font-size: var(--text);
+                line-height: var(--line-height-text);
+            }
+        }
+
+
+
+    }
+
+
+}
+
+@media (min-width: 1024px) {
+    section.profile {
+        margin-top: 13.6rem;
+        justify-content: space-between;
+
+
+        img {
+            width: 445px;
+            transform: translateX(0);
+        }
+
+        .content {
+            justify-self: end;
+            flex: 0;
+            flex-basis: 50%;
+
+            h3 {
+                font-size: var(--title-m);
+                line-height: var(--line-height-m);
+            }
+
+            p {
+                padding-block: 3.4rem 3.2rem;
+            }
+        }
+    }
+}

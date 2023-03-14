@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&display=swap');
+
+:root {
+
+    // COLOR
+
+    --black: hsl(0, 0%, 1%);
+    --blue: hsl(252, 66%, 62%);
+    --orange: hsl(28, 89%, 67%);
+    --pink: hsl(0, 78%, 79%);
+    --red: hsl(7, 77%, 66%);
+    --cyan: hsl(172, 46%, 57%);
+    --violet: hsl(314, 45%, 23%);
+    --brown: hsl(30, 5%, 45%);
+    --cream: hsl(28, 100%, 97%);
+
+    // TYPOGRAPHY
+
+    --title-l: 56px;
+    --title-m: 40px;
+    --title-s: 32px;
+    --text: 18px;
+
+    --line-height-l: 70px;
+    --line-height-m: 51px;
+    --line-height-s: 40px;
+    --line-height-text: 28px;
+}

@@ -1,0 +1,32 @@
+section.grid {
+    width: 100%;
+    display: grid;
+    gap: 2.4rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 182px 158px 182px 158px 182px 182px;
+    grid-template-areas: "graphic graphic"
+        "graphic graphic"
+        "ui-ux apps"
+        "illustrations illustrations"
+        "photography photography"
+        "motion motion";
+}
+
+@media (min-width: 768px) {
+    section.grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 182px 158px 182px;
+        grid-template-areas: "graphic graphic ui-ux apps"
+            "graphic graphic illustrations illustrations"
+            "photography photography motion motion";
+    }
+}
+
+@media (min-width: 1024px) {
+    section.grid {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 182px 158px;
+        grid-template-areas: "graphic graphic ui-ux apps photography photography"
+            "graphic graphic illustrations illustrations motion motion";
+    }
+}

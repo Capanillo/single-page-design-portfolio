@@ -1,0 +1,432 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&display=swap");
+:root {
+  --black: hsl(0, 0%, 1%);
+  --blue: hsl(252, 66%, 62%);
+  --orange: hsl(28, 89%, 67%);
+  --pink: hsl(0, 78%, 79%);
+  --red: hsl(7, 77%, 66%);
+  --cyan: hsl(172, 46%, 57%);
+  --violet: hsl(314, 45%, 23%);
+  --brown: hsl(30, 5%, 45%);
+  --cream: hsl(28, 100%, 97%);
+  --title-l: 56px;
+  --title-m: 40px;
+  --title-s: 32px;
+  --text: 18px;
+  --line-height-l: 70px;
+  --line-height-m: 51px;
+  --line-height-s: 40px;
+  --line-height-text: 28px;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--cream);
+}
+
+.container {
+  width: 100%;
+  max-width: 1110px;
+  padding: 1.6rem;
+}
+
+button {
+  border: none;
+  outline: none;
+  font-weight: 700;
+  font-size: 1.4rem;
+  padding: 0.8rem 2.8rem;
+  background-color: var(--black);
+  color: var(--cream);
+  border-radius: 100vmax;
+  line-height: var(--line-height-text);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+button:hover {
+  background-color: var(--blue);
+}
+
+.tile {
+  padding: 2.4rem;
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.tile h3 {
+  font-size: 2.4rem;
+  align-self: start;
+  color: white;
+}
+.tile.graphic {
+  background-color: var(--blue);
+  grid-area: graphic;
+}
+.tile.ui-ux {
+  background-color: var(--orange);
+  grid-area: ui-ux;
+}
+.tile.apps {
+  background-color: var(--pink);
+  grid-area: apps;
+}
+.tile.illustrations {
+  background-color: var(--red);
+  grid-area: illustrations;
+}
+.tile.photography {
+  background-color: var(--cyan);
+  grid-area: photography;
+}
+.tile.motion {
+  background-color: var(--violet);
+  grid-area: motion;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 7.8rem 3.9rem 5.6rem;
+  }
+  button {
+    font-size: 1.6rem;
+    padding: 1.4rem 4.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    padding-block: 3.4rem 6.4rem;
+  }
+}
+header {
+  width: 100%;
+  height: 4.8rem;
+  margin-bottom: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .logo {
+  width: 4.8rem;
+}
+
+@media (min-width: 768px) {
+  header {
+    height: 6.4rem;
+    margin-bottom: 2rem;
+  }
+  header .logo {
+    width: 6.4rem;
+  }
+}
+@media (min-width: 1024px) {
+  header {
+    margin-bottom: 6.6rem;
+  }
+}
+section.text {
+  margin-bottom: 3.2rem;
+}
+section.text h1 {
+  font-size: 3.6rem;
+  text-align: center;
+  line-height: var(--line-height-s);
+}
+section.text p {
+  font-size: 1.6rem;
+  color: var(--brown);
+  line-height: 2.6rem;
+  text-align: center;
+  padding: 1.6rem 2.9rem 0;
+}
+
+@media (min-width: 768px) {
+  section.text {
+    margin-bottom: 6.4rem;
+  }
+  section.text h1 {
+    font-size: 4.4rem;
+    line-height: 5.5rem;
+  }
+  section.text p {
+    font-size: var(--text);
+    padding-inline: 8vw;
+  }
+}
+@media (min-width: 1024px) {
+  section.text {
+    margin-bottom: 8rem;
+  }
+  section.text h1 {
+    font-size: var(--title-l);
+    line-height: var(--line-height-l);
+  }
+  section.text p {
+    padding-inline: 12vw;
+    padding-top: 2.3rem;
+  }
+}
+section.grid {
+  width: 100%;
+  display: grid;
+  gap: 2.4rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 182px 158px 182px 158px 182px 182px;
+  grid-template-areas: "graphic graphic" "graphic graphic" "ui-ux apps" "illustrations illustrations" "photography photography" "motion motion";
+}
+
+@media (min-width: 768px) {
+  section.grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 182px 158px 182px;
+    grid-template-areas: "graphic graphic ui-ux apps" "graphic graphic illustrations illustrations" "photography photography motion motion";
+  }
+}
+@media (min-width: 1024px) {
+  section.grid {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 182px 158px;
+    grid-template-areas: "graphic graphic ui-ux apps photography photography" "graphic graphic illustrations illustrations motion motion";
+  }
+}
+section.profile {
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section.profile img {
+  width: calc(100% - 4.1rem);
+}
+section.profile .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section.profile .content h3 {
+  font-size: 2.6rem;
+  margin-top: 4rem;
+  color: var(--black);
+  text-align: center;
+}
+section.profile .content p {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  color: var(--brown);
+  text-align: center;
+  padding-block: 2.4rem;
+}
+section.profile .content button {
+  background-color: var(--red);
+}
+section.profile .content button:hover {
+  background-color: var(--orange);
+}
+
+@media (min-width: 768px) {
+  section.profile {
+    margin-top: 12rem;
+    flex-direction: row;
+    align-items: center;
+  }
+  section.profile img {
+    display: block;
+    width: 50%;
+    transform: translateX(-6rem);
+  }
+  section.profile .content {
+    align-items: start;
+    justify-content: space-between;
+    flex: 1;
+    align-content: space-between;
+  }
+  section.profile .content h3 {
+    margin-top: 0;
+    text-align: left;
+    font-size: var(--title-s);
+    line-height: var(--line-height-s);
+  }
+  section.profile .content p {
+    text-align: left;
+    font-size: var(--text);
+    line-height: var(--line-height-text);
+  }
+}
+@media (min-width: 1024px) {
+  section.profile {
+    margin-top: 13.6rem;
+    justify-content: space-between;
+  }
+  section.profile img {
+    width: 445px;
+    transform: translateX(0);
+  }
+  section.profile .content {
+    justify-self: end;
+    flex: 0;
+    flex-basis: 50%;
+  }
+  section.profile .content h3 {
+    font-size: var(--title-m);
+    line-height: var(--line-height-m);
+  }
+  section.profile .content p {
+    padding-block: 3.4rem 3.2rem;
+  }
+}
+section.work {
+  margin-top: 10rem;
+  z-index: 1;
+}
+section.work h3 {
+  font-size: 2.4rem;
+  text-align: center;
+}
+section.work .swiper {
+  margin-block: 3.2rem;
+  overflow: visible;
+}
+section.work .swiper .swiper-wrapper {
+  display: flex;
+}
+section.work .swiper .swiper-wrapper .swiper-slide {
+  flex-shrink: 1;
+}
+section.work .swiper img {
+  display: block;
+  max-width: 72vw;
+  border-radius: 1rem;
+}
+section.work .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+}
+section.work .buttons button {
+  width: 64px;
+  aspect-ratio: 1/1;
+  display: grid;
+  place-items: center;
+  padding: 0;
+}
+section.work .buttons button.swiper-button-prev::after, section.work .buttons button.swiper-button-next::after {
+  content: "";
+}
+
+@media (min-width: 768px) {
+  section.work {
+    margin-top: 12rem;
+  }
+  section.work h3 {
+    font-size: var(--title-s);
+  }
+  section.work .swiper {
+    margin-block: 5.6rem;
+  }
+}
+@media (min-width: 1024px) {
+  section.work {
+    margin-top: 8.8rem;
+  }
+}
+section.call {
+  padding-block: 4.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5.6rem;
+  background-color: var(--black);
+  color: var(--cream);
+  border-radius: 1rem;
+}
+section.call h3 {
+  font-size: 2.6rem;
+  text-align: center;
+}
+section.call p {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  text-align: center;
+  padding: 2.4rem;
+}
+section.call button {
+  background-color: var(--red);
+}
+section.call button:hover {
+  background-color: var(--orange);
+}
+
+@media (min-width: 768px) {
+  section.call {
+    margin-top: 12rem;
+    padding: 5.6rem 7.5rem 6.4rem;
+  }
+  section.call h3 {
+    font-size: var(--title-s);
+  }
+  section.call p {
+    font-size: var(--text);
+    line-height: var(--line-height-text);
+    padding-block: 2.6rem;
+  }
+}
+@media (min-width: 1024px) {
+  section.call {
+    margin-top: 8.8rem;
+    padding-inline: 6.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+  section.call .text {
+    width: 60%;
+  }
+  section.call .text h3 {
+    text-align: left;
+  }
+  section.call .text p {
+    text-align: left;
+    padding: 0;
+    padding-top: 2.5rem;
+  }
+}
+footer {
+  width: 100%;
+  height: 4.8rem;
+  margin-bottom: 1.6rem;
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .logo {
+  width: 4.8rem;
+}
+
+@media (min-width: 768px) {
+  footer {
+    height: 6.4rem;
+    margin-block: 5.6rem 0;
+  }
+  footer .logo {
+    width: 6.4rem;
+  }
+}
